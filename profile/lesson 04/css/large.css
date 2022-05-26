@@ -11,7 +11,7 @@ body  {
  }
  
  h1, h3 {
- color: #FFAD05;
+ color: #bbb;
  }
  
  h3 {
@@ -19,12 +19,12 @@ body  {
  }
  
  h2, h4 {
- color: #FCFF4B;
+ color: #bbb;
  }
  
  header {
      color: #5995ED;
-     background-color: #044389;
+     background-color: #0b5394;
      font-size: 2rem;
      line-height: 2rem;
      font-family: 'Raleway', sans-serif;
@@ -51,14 +51,14 @@ body  {
  
  nav {
      color: #FFF;
-     background-color: #5995ED;
+     background-color: #0b5394;
      font-size: 1.375em;
      line-height: 3rem;
      font-family: 'Raleway', sans-serif;
  }
  
  #current-page {
- background-color: #80CEEC;
+ background-color: #0b5394;
  }
  
  ul {
@@ -67,7 +67,7 @@ body  {
    padding-left: 20%;
    padding-right: 20%;
    overflow: hidden;
-   background-color: #5995ED;
+   background-color: #bbb;
    position: -webkit-sticky; /* Safari */
    position: sticky;
    top: 0;
@@ -151,7 +151,7 @@ body  {
  }
  
  li:hover a {
- color: #FFAD05;
+ color: #bbb;
  background-color: #FFF;
  }
  
@@ -176,7 +176,7 @@ body  {
      display: flex;
      flex-flow: row wrap;
      justify-content: center;
- background-color: #044389;
+ background-color: #0b5394;
  position: relative;
  width: 400px;
  margin: auto;
@@ -197,12 +197,12 @@ body  {
  }
  
  article {
- background-color: #5995ED;
+ background-color: #0b5394;
  width: 900px;
  padding: 1rem;
  margin: auto;
  text-align: left !important;
- border: solid #FFAD05 1px;
+ border: solid #bbb 1px;
  }
  
  button {
@@ -218,7 +218,7 @@ body  {
  }
  
  button:hover {
- background-color: #FFAD05;
+ background-color: #bbb;
  }
  
  .contact {
@@ -226,7 +226,7 @@ body  {
      flex-flow: row wrap;
      justify-content: space-around;
      color: #FFF;
-     background-color: #5995ED;
+     background-color: #0b5394;
  
      font-size: 1rem;
      line-height: 1.5rem;
@@ -244,7 +244,7 @@ body  {
  
  footer {
      color: #FFF;
-     background-color: #80CEEC;
+     background-color: #0b5394;
  
      font-size: 1rem;
      line-height: 1rem;
