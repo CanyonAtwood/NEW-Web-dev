@@ -41,7 +41,7 @@ fetch(requestURL)
         div.appendChild(p3);
         div.appendChild(button);
 
-         
+         console.log(div)
         let img = document.createElement('img');
 
         img.setAttribute('src', `images/${towns.photo}`);
@@ -53,6 +53,6 @@ fetch(requestURL)
         section.appendChild(div);
         section.appendChild(img);
 
-        cards.append(section);
+        cards.appendChild(section);
     });
    });
