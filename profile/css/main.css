@@ -42,6 +42,7 @@ footer {
 }
 
 footer a:visited {
+    font-size: 1.2em;
     color: black;
     /* should be black */
 }
