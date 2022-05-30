@@ -43,6 +43,7 @@ footer {
 
 footer a:visited {
     color: black;
+    /* should be black */
 }
 
 @media (min-width: 32.5em) {
