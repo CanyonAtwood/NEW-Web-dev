@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Simply  Weather | Preston, Idaho</title>
+    <meta name="description" content="WTGI Weather page featuring the Idaho town of Preston">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="css/small.css">
+    <link rel="stylesheet" media="screen and (min-width: 601px)" href="css/medium.css">
+    <link rel="stylesheet" media="screen and (min-width: 801px)" href="css/large.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+</head>
+
+<body>
+
+<header> 
+        <img class="logo" src="..\lesson_05\images\weather logo.jpg" alt="Weather Logo">
+        <section class="headings"> 
+        <h1>Simply Weather</h1>
+        <div class="motto">Preston Pancakes in the Park! 9:00 a.m. Saturday at the city park pavilion</div>
+    </section>
+    <div class="current-conditions">
+        <img class="conditions-img" src="..\lesson_05\images\partially cloudy.jpg" alt="Current Condition: Snowy"> 
+        <div class="current"><b>Currently: <span id="windTemp">15</span>&deg;</b></div>
+    </div>
+</header>
+
+<nav>
+<a id="menu-link" onclick="hamburgerMenu()">&#9776; Menu</a>
+    <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="preston.html">Preston</a></li>
+        <li><a href="#">Soda Springs</a></li>
+        <li><a href="#">Fish Haven</a></li>
+        <li><a href="stormcenter.html">Storm Center</a></li>
+        <li id="current-page"><a href="#">Gallery</a></li>
+    </ul>
+</nav>
+
+<main>
+<h1>Gallery</h1>
+<div id="gallery-grid">
+    <picture class="photo">
+      <img src="https://images.pexels.com/photos/753619/pexels-photo-753619.jpeg?cs=srgb&dl=pexels-george-desipris-753619.jpg&fm=jpg" data-src="..\lesson_05\images\tsunami.jpeg" alt="Dangerous Tsunami"width = "300" height = "400"><figcaption>A dangerous tsunami overtaking a village</figcaption>
+    </picture>
+    <picture class="photo">
+      <img src="https://images.pexels.com/photos/351448/pexels-photo-351448.jpeg?cs=srgb&dl=pexels-invisiblepower-351448.jpg&fm=jpg" data-src="..\lesson_05\images\frozen.jpeg" alt="big lighting"width = "300" height = "400"><figcaption>A frozen forest</figcaption>
+    </picture>
+    <picture class="photo">
+      <img src="https://images.pexels.com/photos/7806172/pexels-photo-7806172.jpeg?cs=srgb&dl=pexels-sanej-prasad-suwal-7806172.jpg&fm=jpg" data-src="..\lesson_05\images\earhtquake.jpeg" alt="earthquake" width = "300" height = "400"><figcaption>Aftermath of a dangerous earthquake</figcaption>
+    </picture>
+    <picture class="photo">
+      <img src="https://images.pexels.com/photos/1162251/pexels-photo-1162251.jpeg?cs=srgb&dl=pexels-andre-furtado-1162251.jpg&fm=jpg" data-src="..\lesson_05\images\lighting.jpeg" alt="lightning"width = "300" height = "400"><figcaption>A huge bolt of lightning in the night</figcaption>
+    </picture>
+    <picture class="photo">
+      <img src="https://images.pexels.com/photos/68482/embers-glow-wood-burn-68482.jpeg?cs=srgb&dl=pexels-pixabay-68482.jpg&fm=jpg" data-src="..\lesson_05\images\fire.jpeg" alt="forest fire"width = "300" height = "400"><figcaption>Trees in the forest destroyed by fire</figcaption>
+    </picture>
+    <picture class="photo">
+      <img src="https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?cs=srgb&dl=pexels-johannes-plenio-1118873.jpg&fm=jpg" data-src="..\lesson_05\images\tornado.jpg" alt="Tornado"width = "300" height = "400"><figcaption>A dangerous tornado</figcaption>
+    </picture>
+    <picture class="photo">
+      <img src="https://images.pexels.com/photos/763398/pexels-photo-763398.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" data-src="..\lesson_05\images\rain.jpg" alt="cars in rain"width = "300" height = "400"><figcaption>Traffic in heavy rain</figcaption>
+    </picture>
+    <picture class="photo">
+      <img src="https://images.pexels.com/photos/1715161/pexels-photo-1715161.jpeg?cs=srgb&dl=pexels-ravi-kant-1715161.jpg&fm=jpg" data-src="..\lesson_05\images\umbrella.jpeg" alt="Umbrella caught in storm" width = "300" height = "400"><figcaption>An umbrella left by the storm>
+  
+    </picture>
+    <picture class="photo">
+      <img src="https://images.pexels.com/photos/849835/pexels-photo-849835.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" data-src="..\lesson_05\images\snow.jpg" alt="car stuck in snow"width = "300" height = "400"><figcaption>A car stuck in the snow</figcaption>
+    </picture>
+</div>
+</main>
+
+
+<footer>
+    &copy;2022 Simply Weather | Attributions | <a href="">Canyon Atwood</a> <div id='output'></div>
+    <script src="scripts/hamburgermenu.js"></script>
+    <script src="scripts/windchill.js"></script>
+    <script src="scripts/currentdate.js"></script>
+</footer>
+</body>
+
+</html>

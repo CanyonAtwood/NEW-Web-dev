@@ -101,7 +101,7 @@ ul {
  padding-right: 15%;
  overflow: hidden;
  background-color: #bbb;
- position: -webkit-sticky; /* Safari */
+ 
  position: sticky;
  top: 0;
  max-height: 3em;
