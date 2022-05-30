@@ -17,6 +17,7 @@ h1 {
     padding: 25px;
     text-align: center;
     margin-top: 0px;
+    border: black solid 2px;
 }
 
 .content {
@@ -31,16 +32,17 @@ h1 {
 
 footer {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: center;
     background-color: #0b5394;
-    /* the color of text in the footer should be white with the background color being blue, it this is not the case then it did not update correctly to github */
-    color: #fff; 
-    border-radius: 25px;
     padding: 25px;
+    border-radius: 25px;
+    color: white; 
+    border: black solid 2px;
+    text-align: center;
+
 }
 
 footer a:visited {
-    color: #fff;
+    color: white;
 }
 
 @media (min-width: 32.5em) {
