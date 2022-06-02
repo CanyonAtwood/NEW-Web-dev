@@ -10,8 +10,7 @@ fetch(requestURL)
     const cards = document.querySelector('.cards');
 
     const name = towns.filter(x => x.name == 'Preston' || x.name == 'Soda Springs' || x.name == 'Fish Haven');
-
-    name.forEach(towns => {
+    const sections=name.map(towns => {
         let section = document.createElement('section');
 
         let div = document.createElement('div');
@@ -53,6 +52,14 @@ fetch(requestURL)
         section.appendChild(div);
         section.appendChild(img);
 
-        cards.appendChild(section);
+        return section;
+        
+    
     });
+    console.log("this works",sections)
+
+    document.getElementById("preston").appendChild(sections[0])
+    document.getElementById("soda").appendChild(sections[1])
+    document.getElementById("fish").appendChild(sections[2])
+    
    });

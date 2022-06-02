@@ -10,11 +10,17 @@
      text-align: center;
   }
   
-  h1, h2, h3, h4, h5 {
-      font-family: 'Raleway', sans-serif;
-      line-height: 1.5rem;
-  }
-  
+  h1, h5 {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.5rem;
+    color: #bbb;
+}
+
+h2, h3, h4 {
+ font-family: 'Raleway', sans-serif;
+ line-height: 1.5rem;
+ color: black;
+}
   h1, h3 {
   color: #FFAD05;
   }
@@ -28,7 +34,7 @@
   }
   
   header {
-      color: #5995ED;
+      color: #fff;
       background-color: #044389;
       font-size: 1rem;
       line-height: 1rem;

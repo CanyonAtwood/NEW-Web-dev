@@ -5,25 +5,27 @@ body  {
     text-align: center;
  }
  
- h1, h2, h3, h4, h5 {
+ h1,  h5 {
      font-family: 'Raleway', sans-serif;
      line-height: 1.5rem;
+     color: #bbb;
  }
+
+ h2, h3, h4 {
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.5rem;
+  color: black;
+}
  
- h1, h3 {
- color: #bbb;
- }
  
  h3 {
  margin: 0px;
  }
  
- h2, h4 {
- color: #bbb;
- }
+
  
  header {
-     color: #5995ED;
+     color: #fff;
      background-color: #0b5394;
      font-size: 2rem;
      line-height: 2rem;

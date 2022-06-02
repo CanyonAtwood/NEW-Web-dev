@@ -20,13 +20,13 @@ body  {
  }
  
  h2, h4 {
- color: #044389;
+ color: #bbb;
  }
  
  header {
-     color: #fff;
+     color: #5995ED;
      background-color: #044389;
-     font-size: 2rem;
+     font-size: 1.5rem;
      line-height: 2rem;
      font-family: 'Raleway', sans-serif;
      display: flex;
@@ -69,7 +69,7 @@ body  {
  width: 5rem;
  margin-left: 1rem;
  margin-right: 1rem;
- color: #fff;
+ color: #bbb;
  line-height: 1.5rem;
  }
  
@@ -87,8 +87,8 @@ body  {
  nav {
      color: #FFF;
      background-color: #0b5394;
-     font-size: 1.5em;
-     line-height: 3rem;
+     font-size: 1em;
+     line-height: normal;
      font-family: 'Raleway', sans-serif;
      display: flex;
      justify-content: center;
@@ -100,10 +100,11 @@ body  {
  }
  
  ul {
+   padding: 0;
    list-style-type: none;
    margin: 0;
    overflow: hidden;
-   background-color: #bbb;
+   background-color: #0b5394;
    position: -webkit-sticky; /* Safari */
    position: sticky;
    top: 0;
@@ -113,12 +114,12 @@ body  {
  li {
   display: inline;
   float: left;
+  padding: 0px;
  }
  
  li:hover {
  background-color: #FFF;
  }
- 
  li a {
  display: block;
  color: #FFF;
@@ -133,42 +134,44 @@ body  {
  }
  
  .home-content-wrap {
- width: 60rem;
+ width: 100%;
  margin: 0 auto;
  margin-top: 15px;
  display: grid;
  grid-template-areas: 
-  'map  map advisory'
-  'item2   item3  item4';
- grid-gap: 15px;
- }
- 
- iframe {
- width: 100%;
- height: 30rem;
- border: none;
+  'advisory advisory advisory'
+  'map map map'
+  'item2  item2 item2'
+  'item3 item3 item3'
+  'item4 item4 item4';
+  grid-gap: 15px;
  }
  
  .item1 { 
    grid-area: map; 
-   grid-column: 1/ span 2;
  }
+ 
  .advisory {
-   grid-column: 3/ span 1;
+   grid-area: advisory; 
+  
  }
  .item2 { 
    grid-area: item2; 
-   grid-column: 1/ span 1;
+ 
  }
  .item3 { 
  grid-area: item3; 
-   grid-column: 2/ span 1;
+ 
  }
  .item4 { 
  grid-area: item4; 
- grid-column: 3/ span 1;
  }
  
+ iframe {
+ width: 95%;
+ height: 30rem;
+ border: none;
+ }
  
  .town-data {
  background-color: #0b5394;
@@ -176,20 +179,16 @@ body  {
  border-radius: 25px;
  }
  
- .town-data p {
- color: #FFF;
- font-weight: bold;
- }
- 
  .town-data img {
- max-width: 250px;
+ max-width: 85%;
  box-shadow: 1rem 1rem .5rem #044389;
  }
+ 
  
  .advisory {
  background-color: #0b5394;
  border: solid #bbb 1px;
- width: 20rem;
+ width: auto;
  padding: 1rem;
  }
  
@@ -205,13 +204,18 @@ body  {
  
  .weather-summary {
  background-color: rgba(128,206,236, 0.6);
- width: 25%;
+ width: 250px;
  position: absolute;
- top: 2rem;
- left: 3rem;
+ top: 25px;
+ left: 25px;
  z-index: 999;
- padding: 1rem;
+ padding: 10px;
  line-height: 1.5rem;
+ }
+ 
+ .weather-summary p {
+ font-size: .8em;
+ color: #000;
  }
  
  .fiveDayForecast {
@@ -220,7 +224,7 @@ body  {
      justify-content: center;
  background-color: #044389;
  position: relative;
- width: 35.5rem;
+ width: 35rem;
  margin: auto;
  }
  
@@ -228,25 +232,18 @@ body  {
  background-color: #fff;
  margin: 1.5rem;
  border: solid white .2rem;
+ color: #000;
  }
  
  th {
  background-color: #0b5394;
+ color: #FFF;
  padding: 1.5rem;
  font-size: 1rem;
  }
  
  td {
  padding: .2rem;
- }
- 
- .articleimg {
- margin: 1rem;
- float: right;
- padding-right: 0px;
- box-shadow: 1rem 1rem .5rem #044389;
- width: 25rem;
- height: auto;
  }
  
  article {
@@ -256,6 +253,14 @@ body  {
  margin: auto;
  text-align: left !important;
  border: solid #bbb 1px;
+ }
+ 
+ .articleimg {
+ margin: 1rem;
+ float: right;
+ padding-right: 0px;
+ box-shadow: 1rem 1rem .5rem #044389;
+ width: 18rem;
  }
  
  form {
@@ -292,15 +297,10 @@ body  {
    font-size: 1rem;
  } 
  
- input[type=submit]:hover {
- background-color: #bbb;
- }
-
- 
  label {
    font-weight: bold;
    float: left;
-   clear: both;
+   clear: none;
    padding: 2px 1em 0 0;
  }
  
@@ -338,36 +338,6 @@ body  {
  background-color: #bbb;
  }
  
- .gallery {
-   margin: 0 auto;
-   display: grid;
-   grid-template:
-     [row1-start] "figure figure figure" auto[row1-end]
-     [row2-start] "figure figure figure" auto [row2-end]
- }
- 
- .gallery figure {
- justify-self: center;
- padding: 1rem;
- }
- 
- figure img {
- width: 95%;
- }
- 
- figure {
- color: #000;
- }
- 
- figure:hover {box-shadow: 0 0 50px #333;}
- 
- 
- .map {
-   max-width: 100%;
-   height: 50%;
-   box-shadow: 1rem 1rem .5rem #044389;
- }
- 
  .contact {
      display: flex;
      flex-flow: row wrap;
@@ -380,12 +350,41 @@ body  {
      line-height: 1.5rem;
      font-family: 'Raleway', sans-serif;
      width: 70%;
-     padding: 2rem;
+     margin: auto;
+     margin-bottom: 1rem;
+     padding: 1rem;
+     border: solid #bbb 1px;
+ }
+ 
+ .map {
+   max-width: 100%;
+   height: auto;
+   box-shadow: 1rem 1rem .5rem #044389;
+ }
+ 
+ .gallery {
+   display: grid;
+   grid-template:
+     [row1-start] "figure figure" auto [row1-end]
+     [row2-start] "figure figure" auto [row2-end]
+     [row3-start] "figure figure" auto [row3-end];
+ }
+ 
+ .gallery figure {
+ justify-self: center;
+ }
+ 
+ figure {
+ color: #000;
+ }
+ 
+ figure img {
+ width: 95%;
  }
  
  .spotlight {
    border: solid #bbb 1px;
-   width: 70%;
+   width: 30rem;
    margin: 0 auto;
    background-color: #0b5394;
    display: grid;
@@ -401,7 +400,7 @@ body  {
  .spotlight img {
   width: 85%;
   margin: 1rem;
-  box-shadow: 1rem 1rem .5rem #044389;
+ box-shadow: 1rem 1rem .5rem #044389;
  }
  
  .image-subtitle-wrap {
@@ -495,10 +494,11 @@ body  {
  .attrib {
  background-color: #0b5394;
  border: solid #bbb 1px;
- width: 50rem;
+ width: 70%;
  padding: 1rem;
  margin: 0 auto;
  }
+ 
  
  footer {
      color: #FFF;
@@ -507,7 +507,7 @@ body  {
      font-size: 1rem;
      line-height: 1rem;
      font-family: 'Raleway', sans-serif;
-     width: auto;
+     width: 100%;
      margin: auto;
      padding: 1rem;
  }
@@ -517,38 +517,42 @@ body  {
    text-decoration: none;
  }
  
- footer a:hover {
-   color: #bbb;
- }
- 
- @media (max-width: 1055px) {
- h2 {
+ @media (max-width: 800px) {
+ h1 {
  font-size: 1.5em;
  }
  nav {
-     font-size: 1em;
- }
- }
- 
- @media (max-width: 971px) {
- 
- .weather-summary {
- background-color: rgba(128,206,236, 0.6);
- width: 250px;
- position: absolute;
- top: 25px;
- left: 25px;
- z-index: 999;
- padding: 10px;
- line-height: 1.5rem;
+     font-size: .8em;
  }
  
+ .motto {
+     font-size: .5em;
+     line-height: 1rem;
  }
- 
  .conditions-home {
-    width: 10em;
-    margin: auto;
-    font-size: 1rem;
-    background-color: #044389;
-    border: none;
+ display: none;
+ }
+ 
+ .home-content-wrap {
+ align-items: center;
+ }
+ }
+ 
+ @media (max-width: 650px) {
+ nav {
+     font-size: .7em;
+ }
+ 
+ .current {
+ width: 3rem;
+ }
+ }
+ 
+ @media (max-width: 613px) {
+ nav {
+     font-size: .6em;
+ }
+ .articleimg {
+ width: 24rem;
+ }
  }

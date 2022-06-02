@@ -55,10 +55,10 @@ footer {
 
 }
 
-footer a:visited {
+footer a {
     font-size: 1.2em;
-    color: black;
-    /* should be black */
+    color: white;
+    
 }
 
 #signature {
