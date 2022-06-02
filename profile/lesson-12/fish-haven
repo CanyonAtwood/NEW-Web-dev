@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Simply Weather | Fish Haven, Idaho</title>
+    <meta name="description" content="Simply Weather page featuring current weather data, town events, and news from Fish Haven, Idaho">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="css/small.css">
+    <link rel="stylesheet" media="screen and (min-width: 601px)" href="css/medium.css">
+    <link rel="stylesheet" media="screen and (min-width: 801px)" href="css/large.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <img class="logo" src="images/weather-logo.jpg" alt="Simply Logo">
+        <section class="headings">
+            <h1>Simply Weather</h1>
+            <div class="motto">Preston Pancakes in the Park! 9:00 a.m. Saturday at the city park pavilion</div>
+        </section>
+        <div class="current-conditions">
+            <img class="conditions-img" id="conditions-icon" src="placeholder.gif"
+                alt="If this image is displayed, the javascript failed to load data from the API.">
+            <div class="current"><b>Currently: <span id="windTemp"></span>&deg;</b></div>
+        </div>
+    </header>
+
+    <nav>
+        <a id="menu-link" onclick="hamburgerMenu()">&#9776; Menu</a>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="preston.html">Preston</a></li>
+            <li><a href="soda-springs.html">Soda Springs</a></li>
+            <li><a href="soda-springs.html">Soda Springs</a></li>
+            <li id="current-page"><a href="fish-haven">Fish Haven</a></li>
+            <li><a href="stormcenter.html">Storm Center</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Fish Haven, Idaho</h1>
+        <article id="townEventsFishHaven">
+
+        </article>
+        <br>
+        <div class="hero-container">
+            <picture>
+                <source srcset="images/fish-haven.jpg" media="(max-width: 869px)">
+                <img class="hero-img" src="images/fish-haven.jpg" alt="An image of fish haven">
+            </picture>
+            <div class="weather-summary">
+                <h2>Weather Summary</h2>
+                <p><strong>Currently:</strong> <span id="current-weather"></span></p>
+                <p><strong>High:</strong> <span id="temp-high"></span>&deg;</p>
+                <p><strong>Wind Chill:</strong> <span id="windChill"></span>&deg;</p>
+                <p><strong>Humidity:</strong> <span id="humid"></span>%</p>
+                <p><strong>Wind Speed:</strong> <span id="windSpeed"></span> MPH</p>
+            </div>
+        </div>
+        <br>
+        <div class="fiveDayForecast">
+            <h3>5 Day Forecast</h3>
+            <table>
+                <tr>
+                    <th id="day-1"></th>
+                    <th id="day-2"></th>
+                    <th id="day-3"></th>
+                    <th id="day-4"></th>
+                    <th id="day-5"></th>
+                </tr>
+                <tr>
+                    <td><img id="img-1" src="placeholder.gif"
+                            alt="If this image is displayed, the javascript failed to load data from the API."></td>
+                    <td><img id="img-2" src="placeholder.gif"
+                            alt="If this image is displayed, the javascript failed to load data from the API."></td>
+                    <td><img id="img-3" src="placeholder.gif"
+                            alt="If this image is displayed, the javascript failed to load data from the API."></td>
+                    <td><img id="img-4" src="placeholder.gif"
+                            alt="If this image is displayed, the javascript failed to load data from the API."></td>
+                    <td><img id="img-5" src="placeholder.gif"
+                            alt="If this image is displayed, the javascript failed to load data from the API."></td>
+                </tr>
+                <tr>
+                    <td id="high-1"></td>
+                    <td id="high-2"></td>
+                    <td id="high-3"></td>
+                    <td id="high-4"></td>
+                    <td id="high-5"></td>
+                </tr>
+                <tr>
+                    <td id="condition-1"></td>
+                    <td id="condition-2"></td>
+                    <td id="condition-3"></td>
+                    <td id="condition-4"></td>
+                    <td id="condition-5"></td>
+                </tr>
+                <tr>
+                    <td id="low-1"></td>
+                    <td id="low-2"></td>
+                    <td id="low-3"></td>
+                    <td id="low-4"></td>
+                    <td id="low-5"></td>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <article>
+            <img src="images/fish-haven.jpg" alt= "fish haven" class="articleimg">
+            <span class="shout-out"> <a href="http://www.bearlakewest.com/news_details.php?view=article&id=30">
+            
+                <h2>Bear Lake West</h2>
+                <h3>by not listed</h3>
+                <p>You may have noticed that the wooden arch at the main entrance to Bear Lake West is deteriorating and has become a potential safety hazard.  The HOA Board has selected a contractor to remove the wooden arch.  This will take place later this week, weather permitting, with minimal disruption to traffic flow.  One lane will remain open though if you wish to avoid the site, you can also enter via Smith Ranch Road..</p>
+                <p>A new attractive metal arch will replace the old one.  Once the wooden arch has been removed, the HOA Board will be selecting a contractor to fabricate and install the metal arch.  With the exception of the wooden arch, the design of the entrance will remain the same.  There will be some upgrades to the lighting and the wooden railings between the stone pillars..</p>
+                </article>
+                <p><button onclick="window.location.href = 'http://www.bearlakewest.com/news_details.php?view=article&id=30';">Continue
+                        Reading Article...</button></p>
+            </article>
+        <br><br>
+        <div class="contact">
+            <p><strong>Simply Weather</strong>
+                <br>6328 Haywood Street
+                <br>Preston, ID 79707</p>
+                <p> &#9742; 999.999.9999
+                    <br>
+                    &#9993; simplyweather@gmail.com.
+                </p>
+            <div class="map"><img src="images/fishhavenmap.png" alt="Google Maps image of Fish Haven, Idaho"></div>
+        </div>
+    </main>
+
+    <footer>
+        &copy;2022 Simply Weather | <a href="attrib.html">Attributions</a> | 
+        <div id='output'></div>
+        <script src="scripts/grabJSONfish.js"></script>
+        <script src="scripts/hamburgermenu.js"></script>
+        <script src="scripts/currentdate.js"></script>
+    </footer>
+</body>
+
+</html>
