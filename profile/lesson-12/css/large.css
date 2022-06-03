@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5 {
 }
 
 h1, h3 {
-    color: #FFF
+    color: #000
 }
 
 h3 {
@@ -204,7 +204,7 @@ iframe {
 }
 
 .weather-summary {
-    background-color: purple;
+    background-color: red;
     width: 25%;
     position: absolute;
     top: 2rem;
