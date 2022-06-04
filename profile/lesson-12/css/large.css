@@ -1,5 +1,5 @@
 body {
-    color: #FFF;
+    background-color: #000;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto Light', sans-serif;
@@ -12,7 +12,7 @@ h1, h2, h3, h4, h5 {
 }
 
 h1, h3 {
-    color: #000
+    color: #fff
 }
 
 h3 {
