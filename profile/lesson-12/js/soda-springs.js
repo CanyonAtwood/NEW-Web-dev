@@ -8,21 +8,21 @@ request.responseType = 'json';
 request.send();
 request.onload = function () {
     var townEvents = request.response;
-    townPreston(townEvents);
+    townSodaSprings(townEvents);
 }
 
-//* Function to write Preston data onto page; loop through JSON to find town name, then write header and events in townEventsPreston article.
+//* Function to write Soda Springs data onto page; loop through JSON to find town name, then write header and events in townEventsSoda article
 
-function townPreston(jsonObj) {
+function townSodaSprings(jsonObj) {
     var towns = jsonObj['towns']
     var i = 0;
     var name = towns[i].name;
 
     for (i = 0; i < towns.length; i++) {
         var name = towns[i].name;
-        if (name == "Preston") {
+        if (name == "Soda Springs") {
             var eventsString = towns[i].events.join(', ');
-            document.getElementById("townEventsPreston").innerHTML = "<h2>Preston Events</h2> " + eventsString;
+            document.getElementById("townEventsSodaSprings").innerHTML = "<h2>Soda Springs Events</h2> " + eventsString;
         }
     }
 }
@@ -30,7 +30,7 @@ function townPreston(jsonObj) {
 //* Request Current Weather data from OpenWeatherMap
 
 let weatherRequest = new XMLHttpRequest();
-let apiURLstring = 'https://api.openweathermap.org/data/2.5/weather?id=5604473&units=imperial&APPID=0b25c1f6d23d52987a6d10f8c21a31e6';
+let apiURLstring = 'https://api.openweathermap.org/data/2.5/weather?id=5607916&units=imperial&APPID=0b25c1f6d23d52987a6d10f8c21a31e6';
 weatherRequest.open('Get', apiURLstring, true);
 weatherRequest.send();
 
@@ -76,8 +76,12 @@ function windChill(tempF, speed) {
   return soCold;
 }
 
+//* Get Forecast data from OpenWeatherMap
 
-
+let forecastRequest = new XMLHttpRequest();
+let forecastApiURLstring = 'https://api.openweathermap.org/data/2.5/forecast?id=5607916&units=imperial&APPID=0b25c1f6d23d52987a6d10f8c21a31e6';
+forecastRequest.open('Get', forecastApiURLstring, true);
+forecastRequest.send();
 
 //* Function to display five-day forecast days as string rather than integer
 
@@ -115,7 +119,41 @@ function findDayOfWeek(apiDay) {
 
 //* Get correct days for five day forecast, compare dt_txt for time stamp 18:00:00 and loop
 
+forecastRequest.onload = function () {
+  let forecastData = JSON.parse(forecastRequest.responseText);
+  console.log(forecastData);
 
+  var imageWeather = "https://openweathermap.org/img/w/";
+  var forecastArray = forecastData.list;
+  var dayOne, dayTwo, dayThree, dayFour, dayFive;
+  var z = 0;
+
+  for (var i = 0; i < forecastArray.length; i++) {
+    var x = forecastData.list[i].dt_txt;
+    var y = x.includes('18:00:00');
+    if (y == true) {
+      switch (z) {
+        case 0:
+          dayOne = forecastData.list[i];
+          break;
+        case 1:
+          dayTwo = forecastData.list[i];
+          break;
+        case 2:
+          dayThree = forecastData.list[i];
+          break;
+        case 3:
+          dayFour = forecastData.list[i];
+          break;
+        case 4:
+          dayFive = forecastData.list[i];
+          break;
+        default:
+          break;
+      }
+      z++;
+    }
+  }
 
   //* Write data into table by element IDs.
 
@@ -154,3 +192,4 @@ function findDayOfWeek(apiDay) {
   document.getElementById("low-3").innerHTML = dayThree.main.temp_min + "&deg;";
   document.getElementById("low-4").innerHTML = dayFour.main.temp_min + "&deg;";
   document.getElementById("low-5").innerHTML = dayFive.main.temp_min + "&deg;";
+}

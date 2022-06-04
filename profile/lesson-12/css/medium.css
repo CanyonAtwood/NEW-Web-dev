@@ -286,7 +286,7 @@ body {
   
   input[type=submit] {
       background-color: #0b5394;
-      color: black;
+      color: #fff;
       border: none;
       padding: 1rem;
       text-align: center;

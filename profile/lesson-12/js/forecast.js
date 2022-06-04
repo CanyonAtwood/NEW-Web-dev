@@ -1,7 +1,7 @@
 //* Get JSON data from OpenWeatherMap
 
 let forecastRequest = new XMLHttpRequest();
-let forecastApiURLstring = 'https://api.openweathermap.org/data/2.5/forecast?id=5604473&units=imperial&APPID=0b25c1f6d23d52987a6d10f8c21a31e6';
+let forecastApiURLstring = 'https://api.openweathermap.org/data/2.5/forecast?id=5604473&units=imperial&APPID=f22c82e970681dd0fef21542d19da43e';
 forecastRequest.open('Get', forecastApiURLstring, true);
 forecastRequest.send();
 
